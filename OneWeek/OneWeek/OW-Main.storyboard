@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ss6-x7-kBZ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="poq-vU-2n4">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="ss6-x7-kBZ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dhw-rb-0Qg">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="0rk-WM-CHh" kind="relationship" relationship="rootViewController" id="m9J-XA-p3M"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ak2-BE-APE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="350" y="271"/>
+        </scene>
+        <!--Timeline View Controller - Timeline-->
+        <scene sceneID="Ugc-Da-H9S">
+            <objects>
+                <viewController title="Timeline" id="0rk-WM-CHh" customClass="OWTimelineViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="73Z-Uh-eRi"/>
+                        <viewControllerLayoutGuide type="bottom" id="Yc3-9U-pzr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="p1d-nP-Uvx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Timeline" id="k0P-kM-fSc">
+                        <barButtonItem key="leftBarButtonItem" title="Settings" id="5VZ-jS-4sn">
+                            <connections>
+                                <action selector="settingsTapped:" destination="0rk-WM-CHh" id="cn0-gG-XLE"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Input" id="bs3-L4-py1">
+                            <connections>
+                                <segue destination="YkJ-O9-qTF" kind="push" id="kq1-gj-HgV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x1n-N6-1UP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="982" y="271"/>
+        </scene>
+        <!--Input View Controller - Input-->
+        <scene sceneID="uYa-kd-BX8">
+            <objects>
+                <viewController title="Input" id="YkJ-O9-qTF" customClass="OWInputViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wko-LY-ZR7"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ak5-Vg-wfc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7bu-gC-QcZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Input" id="IbU-nS-QVu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xCX-hA-3V3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1460" y="271"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
