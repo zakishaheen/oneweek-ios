@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OWSelectMeasurementsViewController : UIViewController
+@interface OWSelectMeasurementsViewController : UIViewController< UITableViewDataSource,
+UITableViewDelegate>
+@property (strong, nonatomic) NSMutableArray *measurements;
+@property (weak, nonatomic) IBOutlet UITableView *_tableView;
 
 @end

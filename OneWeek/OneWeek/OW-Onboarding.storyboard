@@ -38,7 +38,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="selectMeasurementsTapped:" destination="arQ-BM-yO4" eventType="touchUpInside" id="9lp-ZZ-mYr"/>
                                     <segue destination="e1c-9u-iaq" kind="push" identifier="selectMeasurements" id="HtC-tX-QnT"/>
                                 </connections>
                             </button>
@@ -67,7 +66,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wiz-WO-Sfc">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="YeZ-Lh-LLL">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="510"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="measurementCell" textLabel="OUh-e0-AoC" style="IBUITableViewCellStyleDefault" id="sFs-He-g17">
+                                        <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sFs-He-g17" id="lw9-4r-oM8">
+                                            <rect key="frame" x="0.0" y="0.0" width="281" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OUh-e0-AoC">
+                                                    <rect key="frame" x="15" y="0.0" width="266" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="e1c-9u-iaq" id="aFa-vo-cKm"/>
+                                    <outlet property="delegate" destination="e1c-9u-iaq" id="Ps3-mT-DUx"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wiz-WO-Sfc">
                                 <rect key="frame" x="130" y="518" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Let's go!">
@@ -79,8 +106,19 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Wiz-WO-Sfc" firstAttribute="top" secondItem="YeZ-Lh-LLL" secondAttribute="bottom" constant="8" symbolic="YES" id="1SX-UA-hhJ"/>
+                            <constraint firstItem="YeZ-Lh-LLL" firstAttribute="leading" secondItem="2gZ-kX-4eY" secondAttribute="leading" id="L8k-xD-Ogu"/>
+                            <constraint firstAttribute="trailing" secondItem="YeZ-Lh-LLL" secondAttribute="trailing" id="W30-p9-2fg"/>
+                            <constraint firstItem="dDb-oQ-CrL" firstAttribute="top" secondItem="Wiz-WO-Sfc" secondAttribute="bottom" constant="20" id="fg5-U2-jiT"/>
+                            <constraint firstItem="YeZ-Lh-LLL" firstAttribute="centerX" secondItem="Wiz-WO-Sfc" secondAttribute="centerX" id="oQe-FB-a2C"/>
+                            <constraint firstItem="YeZ-Lh-LLL" firstAttribute="top" secondItem="2gZ-kX-4eY" secondAttribute="top" id="p8J-7k-0sF"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Select Measurements" id="nCw-QG-krl"/>
+                    <connections>
+                        <outlet property="_tableView" destination="YeZ-Lh-LLL" id="ETW-xL-SEz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zto-Fy-ACH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

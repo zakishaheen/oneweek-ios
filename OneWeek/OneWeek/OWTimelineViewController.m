@@ -9,6 +9,7 @@
 #import "OWTimelineViewController.h"
 
 @interface OWTimelineViewController ()
+@property (weak, nonatomic) IBOutlet UITableView *_tableView;
 
 @end
 
@@ -27,6 +28,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    CGFloat t = self.topLayoutGuide.length;
+    self._tableView.contentInset = UIEdgeInsetsMake(t + 60, 0, 0, 0);
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,4 +49,19 @@
 
 }
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 5;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *cellIdentifier = @"measurementCell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    
+    return cell;
+}
 @end

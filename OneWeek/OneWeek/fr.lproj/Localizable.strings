@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  OneWeek
+
+  Created by Zaki Shaheen on 3/18/14.
+  Copyright (c) 2014 Zaki Shaheen. All rights reserved.
+*/
+
+"head" = "fr_Head";
+"neck" = "fr_Neck";
+"breast_size" = "fr_Breast size";
+"chest" = "fr_Chest";
+"shoulders" = "fr_Shoulders";
+"forearm" = "fr_Forearm";
+"bicep" = "fr_Bicep";
+"waist" = "fr_Waist";
+"hip" = "fr_Hip";
+"thigh" = "fr_Thigh";
+"calf" = "fr_Calf";
+"height" = "fr_Height";
+"weight" = "fr_Weight";
+"age" = "fr_Age";
+"bfp" = "fr_Body fat percentage";
+"bmi" = "fr_Body mass index (BMI)";
+"bmr" = "fr_Basal matabolic rate (BMR)";
+"whr" = "fr_Waist to height ratio (WHR)";
+"whtr" = "fr_Waist to height ratio (WhtR)";

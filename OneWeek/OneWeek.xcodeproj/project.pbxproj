@@ -29,6 +29,8 @@
 		50C354AC18D851E4005F5C20 /* OWInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C354AB18D851E4005F5C20 /* OWInputViewController.m */; };
 		50C354B218D85268005F5C20 /* OWSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C354B118D85268005F5C20 /* OWSettingsViewController.m */; };
 		50C354B518D85684005F5C20 /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C354B418D85684005F5C20 /* UIColor+CustomColors.m */; };
+		50C354CA18D87543005F5C20 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50C354C818D87543005F5C20 /* Localizable.strings */; };
+		50C354CE18D8782E005F5C20 /* OWBasicDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C354CD18D8782E005F5C20 /* OWBasicDataModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,26 @@
 		50C354B118D85268005F5C20 /* OWSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWSettingsViewController.m; sourceTree = "<group>"; };
 		50C354B318D85684005F5C20 /* UIColor+CustomColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CustomColors.h"; sourceTree = "<group>"; };
 		50C354B418D85684005F5C20 /* UIColor+CustomColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CustomColors.m"; sourceTree = "<group>"; };
+		50C354B618D8732A005F5C20 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		50C354B718D8732A005F5C20 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		50C354B818D87332005F5C20 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		50C354B918D87333005F5C20 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		50C354BA18D87337005F5C20 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		50C354BB18D87337005F5C20 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		50C354BC18D8733B005F5C20 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		50C354BD18D8733B005F5C20 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		50C354BE18D8733F005F5C20 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		50C354BF18D8733F005F5C20 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		50C354C018D87374005F5C20 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		50C354C118D87374005F5C20 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		50C354C218D8737D005F5C20 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		50C354C318D8737D005F5C20 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		50C354C418D87382005F5C20 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		50C354C518D87382005F5C20 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		50C354C918D87543005F5C20 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		50C354CB18D87554005F5C20 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		50C354CC18D8782E005F5C20 /* OWBasicDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWBasicDataModel.h; sourceTree = "<group>"; };
+		50C354CD18D8782E005F5C20 /* OWBasicDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWBasicDataModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,13 +161,14 @@
 				50C354A418D8519D005F5C20 /* OneWeek - Onboarding */,
 				50C354A518D851B4005F5C20 /* OneWeek - Main */,
 				50C354A618D851C0005F5C20 /* OneWeek - Settings */,
-				50C3549718D84687005F5C20 /* OneWeek.entitlements */,
 				50C3547518D8460D005F5C20 /* OWAppDelegate.h */,
 				50C3547618D8460D005F5C20 /* OWAppDelegate.m */,
-				50C3547818D8460D005F5C20 /* Images.xcassets */,
-				50C3546D18D8460D005F5C20 /* Supporting Files */,
 				50C354B318D85684005F5C20 /* UIColor+CustomColors.h */,
 				50C354B418D85684005F5C20 /* UIColor+CustomColors.m */,
+				50C3547818D8460D005F5C20 /* Images.xcassets */,
+				50C3546D18D8460D005F5C20 /* Supporting Files */,
+				50C354CC18D8782E005F5C20 /* OWBasicDataModel.h */,
+				50C354CD18D8782E005F5C20 /* OWBasicDataModel.m */,
 			);
 			path = OneWeek;
 			sourceTree = "<group>";
@@ -153,6 +176,8 @@
 		50C3546D18D8460D005F5C20 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				50C354C818D87543005F5C20 /* Localizable.strings */,
+				50C3549718D84687005F5C20 /* OneWeek.entitlements */,
 				50C3546E18D8460D005F5C20 /* OneWeek-Info.plist */,
 				50C3546F18D8460D005F5C20 /* InfoPlist.strings */,
 				50C3547218D8460D005F5C20 /* main.m */,
@@ -283,6 +308,14 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				fr,
+				de,
+				"zh-Hans",
+				"zh-Hant",
+				ja,
+				ru,
+				ko,
+				it,
 			);
 			mainGroup = 50C3545A18D8460D005F5C20;
 			productRefGroup = 50C3546418D8460D005F5C20 /* Products */;
@@ -301,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50C3549918D846F6005F5C20 /* OW-Onboarding.storyboard in Resources */,
+				50C354CA18D87543005F5C20 /* Localizable.strings in Resources */,
 				50C3549B18D848B5005F5C20 /* OW-Main.storyboard in Resources */,
 				50C3547118D8460D005F5C20 /* InfoPlist.strings in Resources */,
 				50C3549D18D84ADB005F5C20 /* OW-Settings.storyboard in Resources */,
@@ -330,6 +364,7 @@
 				50C3547318D8460D005F5C20 /* main.m in Sources */,
 				50C354A018D84CCC005F5C20 /* OWOverviewViewController.m in Sources */,
 				50C354B518D85684005F5C20 /* UIColor+CustomColors.m in Sources */,
+				50C354CE18D8782E005F5C20 /* OWBasicDataModel.m in Sources */,
 				50C354AC18D851E4005F5C20 /* OWInputViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,6 +392,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				50C3547018D8460D005F5C20 /* en */,
+				50C354B618D8732A005F5C20 /* fr */,
+				50C354B818D87332005F5C20 /* de */,
+				50C354BA18D87337005F5C20 /* zh-Hans */,
+				50C354BC18D8733B005F5C20 /* zh-Hant */,
+				50C354BE18D8733F005F5C20 /* ja */,
+				50C354C018D87374005F5C20 /* ru */,
+				50C354C218D8737D005F5C20 /* ko */,
+				50C354C418D87382005F5C20 /* it */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -365,8 +408,25 @@
 			isa = PBXVariantGroup;
 			children = (
 				50C3548918D8460D005F5C20 /* en */,
+				50C354B718D8732A005F5C20 /* fr */,
+				50C354B918D87333005F5C20 /* de */,
+				50C354BB18D87337005F5C20 /* zh-Hans */,
+				50C354BD18D8733B005F5C20 /* zh-Hant */,
+				50C354BF18D8733F005F5C20 /* ja */,
+				50C354C118D87374005F5C20 /* ru */,
+				50C354C318D8737D005F5C20 /* ko */,
+				50C354C518D87382005F5C20 /* it */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		50C354C818D87543005F5C20 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50C354C918D87543005F5C20 /* en */,
+				50C354CB18D87554005F5C20 /* fr */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
