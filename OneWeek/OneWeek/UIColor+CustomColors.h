@@ -10,4 +10,6 @@
 
 @interface UIColor (CustomColors)
 + (UIColor *) rubineRed;
++ (UIColor *) navigationBarGrey;
++ (UIColor *) hairlineColor;
 @end

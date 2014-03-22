@@ -13,7 +13,7 @@
 
 - (void) setAppropriateRootViewController{
 
-    BOOL userHasJumpedOnBoard = NO;
+    BOOL userHasJumpedOnBoard = YES;
     
     UIViewController *controller = nil;
     NSString *storyboardName = nil;

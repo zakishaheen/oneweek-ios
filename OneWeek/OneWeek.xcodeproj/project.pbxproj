@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		504E3DB618D9D9150002FAE5 /* OWNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 504E3DB518D9D9150002FAE5 /* OWNavigationView.m */; };
+		504E3DB918DDB1CE0002FAE5 /* OWWeekPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 504E3DB818DDB1CE0002FAE5 /* OWWeekPickerView.m */; };
 		50C3546718D8460D005F5C20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50C3546618D8460D005F5C20 /* Foundation.framework */; };
 		50C3546918D8460D005F5C20 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50C3546818D8460D005F5C20 /* CoreGraphics.framework */; };
 		50C3546B18D8460D005F5C20 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50C3546A18D8460D005F5C20 /* UIKit.framework */; };
@@ -44,6 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		504E3DB418D9D9150002FAE5 /* OWNavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWNavigationView.h; sourceTree = "<group>"; };
+		504E3DB518D9D9150002FAE5 /* OWNavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWNavigationView.m; sourceTree = "<group>"; };
+		504E3DB718DDB1CE0002FAE5 /* OWWeekPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWWeekPickerView.h; sourceTree = "<group>"; };
+		504E3DB818DDB1CE0002FAE5 /* OWWeekPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWWeekPickerView.m; sourceTree = "<group>"; };
 		50C3546318D8460D005F5C20 /* OneWeek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneWeek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50C3546618D8460D005F5C20 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		50C3546818D8460D005F5C20 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -224,6 +230,10 @@
 				50C354A818D851D9005F5C20 /* OWTimelineViewController.m */,
 				50C354AA18D851E4005F5C20 /* OWInputViewController.h */,
 				50C354AB18D851E4005F5C20 /* OWInputViewController.m */,
+				504E3DB418D9D9150002FAE5 /* OWNavigationView.h */,
+				504E3DB518D9D9150002FAE5 /* OWNavigationView.m */,
+				504E3DB718DDB1CE0002FAE5 /* OWWeekPickerView.h */,
+				504E3DB818DDB1CE0002FAE5 /* OWWeekPickerView.m */,
 			);
 			name = "OneWeek - Main";
 			sourceTree = "<group>";
@@ -358,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50C354A918D851D9005F5C20 /* OWTimelineViewController.m in Sources */,
+				504E3DB918DDB1CE0002FAE5 /* OWWeekPickerView.m in Sources */,
 				50C3547718D8460D005F5C20 /* OWAppDelegate.m in Sources */,
 				50C354A318D84CF0005F5C20 /* OWSelectMeasurementsViewController.m in Sources */,
 				50C354B218D85268005F5C20 /* OWSettingsViewController.m in Sources */,
@@ -365,6 +376,7 @@
 				50C354A018D84CCC005F5C20 /* OWOverviewViewController.m in Sources */,
 				50C354B518D85684005F5C20 /* UIColor+CustomColors.m in Sources */,
 				50C354CE18D8782E005F5C20 /* OWBasicDataModel.m in Sources */,
+				504E3DB618D9D9150002FAE5 /* OWNavigationView.m in Sources */,
 				50C354AC18D851E4005F5C20 /* OWInputViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -601,6 +613,7 @@
 				50C3549118D8460D005F5C20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		50C3549218D8460D005F5C20 /* Build configuration list for PBXNativeTarget "OneWeekTests" */ = {
 			isa = XCConfigurationList;
@@ -609,6 +622,7 @@
 				50C3549418D8460D005F5C20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

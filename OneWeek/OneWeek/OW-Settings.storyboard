@@ -23,7 +23,7 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="50k-xU-5zD">
+                    <navigationItem key="navigationItem" title="Settings" id="50k-xU-5zD">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="nhT-Pn-zro">
                             <connections>
                                 <action selector="closeSettings:" destination="pVB-FF-JJD" id="Q8b-Pw-1Ye"/>

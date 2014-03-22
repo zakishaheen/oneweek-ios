@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OWNavigationView.h"
 
-@interface OWInputViewController : UIViewController
+
+@interface OWInputViewController : UIViewController<OWNavigationViewDelegate>
 
 @end

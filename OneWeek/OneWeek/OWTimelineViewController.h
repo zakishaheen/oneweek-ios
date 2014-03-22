@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OWNavigationView.h"
+@interface OWTimelineViewController : UIViewController<
+UITableViewDelegate,
+UITableViewDataSource,
+OWNavigationViewDelegate
+>
 
-@interface OWTimelineViewController : UIViewController< UITableViewDelegate, UITableViewDataSource>
 
 @end
