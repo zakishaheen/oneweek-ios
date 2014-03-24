@@ -33,6 +33,7 @@
 		50C354B518D85684005F5C20 /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C354B418D85684005F5C20 /* UIColor+CustomColors.m */; };
 		50C354CA18D87543005F5C20 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50C354C818D87543005F5C20 /* Localizable.strings */; };
 		50C354CE18D8782E005F5C20 /* OWBasicDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C354CD18D8782E005F5C20 /* OWBasicDataModel.m */; };
+		50E4F4DB18E07B590023AEEF /* OWWeekView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E4F4DA18E07B590023AEEF /* OWWeekView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,8 @@
 		50C354CB18D87554005F5C20 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		50C354CC18D8782E005F5C20 /* OWBasicDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWBasicDataModel.h; sourceTree = "<group>"; };
 		50C354CD18D8782E005F5C20 /* OWBasicDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWBasicDataModel.m; sourceTree = "<group>"; };
+		50E4F4D918E07B590023AEEF /* OWWeekView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWWeekView.h; sourceTree = "<group>"; };
+		50E4F4DA18E07B590023AEEF /* OWWeekView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWWeekView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +237,8 @@
 				504E3DB518D9D9150002FAE5 /* OWNavigationView.m */,
 				504E3DB718DDB1CE0002FAE5 /* OWWeekPickerView.h */,
 				504E3DB818DDB1CE0002FAE5 /* OWWeekPickerView.m */,
+				50E4F4D918E07B590023AEEF /* OWWeekView.h */,
+				50E4F4DA18E07B590023AEEF /* OWWeekView.m */,
 			);
 			name = "OneWeek - Main";
 			sourceTree = "<group>";
@@ -375,6 +380,7 @@
 				50C3547318D8460D005F5C20 /* main.m in Sources */,
 				50C354A018D84CCC005F5C20 /* OWOverviewViewController.m in Sources */,
 				50C354B518D85684005F5C20 /* UIColor+CustomColors.m in Sources */,
+				50E4F4DB18E07B590023AEEF /* OWWeekView.m in Sources */,
 				50C354CE18D8782E005F5C20 /* OWBasicDataModel.m in Sources */,
 				504E3DB618D9D9150002FAE5 /* OWNavigationView.m in Sources */,
 				50C354AC18D851E4005F5C20 /* OWInputViewController.m in Sources */,

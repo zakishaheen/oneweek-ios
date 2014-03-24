@@ -8,6 +8,7 @@
 
 #import "OWWeekPickerView.h"
 #import "UIColor+CustomColors.h"
+#import "OWWeekView.h"
 
 @interface OWWeekPickerView ()
 @property (nonatomic, strong) UIScrollView *navScrollView;
@@ -16,6 +17,7 @@
 @property (nonatomic) int currentYear;
 @property (nonatomic) int selectedYear;
 @property (nonatomic) int currentPage;
+@property (nonatomic, strong) OWWeekView *previousSelected;
 
 @property (nonatomic, strong) NSMutableArray *weeksToShow;
 
@@ -34,71 +36,7 @@
 
 - (UIView *)getViewForDate:(NSDate*)date{
     
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSDateComponents *startComponents = [calendar components:NSDayCalendarUnit fromDate:date];
-    
-    int startDay = startComponents.day;
-    
-    NSDateComponents *componentsToAdd = [NSDateComponents new];
-    componentsToAdd.day = 7;
-    NSDate *endDate = [calendar dateByAddingComponents:componentsToAdd toDate:date options:0];
-    
-    NSDateComponents *endComponents = [calendar components:NSDayCalendarUnit fromDate:endDate];
-    
-    int endDay = endComponents.day;
-    
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    
-    [dateFormatter setDateFormat:@"MMM ''yy"];
-    
-    NSString *monthString = [[dateFormatter stringFromDate:endDate] uppercaseString];
-    
-    UIView *result = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 80, 40)];
-    
-    
-    NSString *weekFontName = @"HelveticaNeue-Light";
-    CGFloat weekFontSize = 12.0f;
-    UIColor *weekFontColor = [UIColor darkGrayColor];
-    NSString *weekText = [NSString stringWithFormat:@"%.2d - %.2d", startDay, endDay];
-    
-    NSDictionary *weekAttributes = @{
-                                 NSFontAttributeName:[ UIFont fontWithName:weekFontName size:weekFontSize],
-                                 NSForegroundColorAttributeName: weekFontColor,
-                                 
-                                 };
-    
-    
-    UILabel *weekLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 9, 80, 12)];
-    
-    [weekLabel setAttributedText:[[NSAttributedString alloc]
-                               initWithString:weekText
-                               attributes:weekAttributes]];
-    [weekLabel setTextAlignment:NSTextAlignmentCenter];
-    
-
-    NSString *monthFontName = @"HelveticaNeue-Light";
-    CGFloat monthFontSize = 10.0f;
-    UIColor *monthFontColor = [UIColor darkGrayColor];
-    NSString *monthText = monthString;
-    
-    NSDictionary *monthAttributes = @{
-                                      NSFontAttributeName:[ UIFont fontWithName:monthFontName size:monthFontSize],
-                                      NSForegroundColorAttributeName: monthFontColor,
-                                      
-                                      };
-
-    UILabel *monthLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 21, 80, 10)];
-    [monthLabel setAttributedText:[[NSAttributedString alloc]
-                                  initWithString:monthText
-                                  attributes:monthAttributes]];
-    [monthLabel setTextAlignment:NSTextAlignmentCenter];
-    
-
-    
-    [result addSubview:weekLabel];
-    [result addSubview:monthLabel];
-
-    
+    OWWeekView *result = [[OWWeekView alloc] initWithDate:date andFrame:CGRectMake(0, 0, 80, 40)];
     return result;
 }
 
@@ -151,6 +89,17 @@
     
 }
 
+- (void) weekTapped:(UITapGestureRecognizer *)obj{
+    OWWeekView *v = (OWWeekView *) [obj view];
+    
+    [self.previousSelected setIsSelected:NO];
+    [v setIsSelected:YES];
+    
+    self.previousSelected = v;
+    
+    
+}
+
 - (void)layoutSubviews{
     [super layoutSubviews];
     
@@ -167,10 +116,20 @@
     int i=0;
     for (NSDate *d in self.weeksToShow) {
         UIView *r = [self getViewForDate:d];
+        r.tag = i;
+        
+        UITapGestureRecognizer  *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(weekTapped:)];
+        recognizer.numberOfTapsRequired = 1;
+        recognizer.numberOfTouchesRequired = 1;
+        [r addGestureRecognizer:recognizer];
+        
         r.center = CGPointMake(r.center.x + 80*i, r.center.y);
         [self.navScrollView addSubview:r];
         i++;
     }
+    
+    OWWeekView *current = (OWWeekView*)[self.navScrollView viewWithTag:i-1];
+    [current setIsCurrent:YES];
     
     [self.navScrollView setContentSize:CGSizeMake(80* [self.weeksToShow count], 40)];
     [self.navScrollView setContentOffset:CGPointMake(self.navScrollView.contentSize.width - self.navScrollView.bounds.size.width, 0)];
