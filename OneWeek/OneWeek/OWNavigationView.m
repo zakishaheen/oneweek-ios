@@ -10,6 +10,7 @@
 #import "UIColor+CustomColors.h"
 
 #define NAV_ITEM_MARGIN 18.0f
+//#define VISUALDEBUG 1
 
 @interface OWNavigationView ()
 
@@ -42,9 +43,13 @@
     self.navScrollView = [[UIScrollView alloc] initWithFrame:navScrollViewRect];
     [self.navScrollView setScrollEnabled:NO];
     [self.navScrollView setShowsHorizontalScrollIndicator:NO];
+#ifdef VISUALDEBUG
+    [self.navScrollView setBackgroundColor:[UIColor whiteColor]];
+#else
     [self.navScrollView setBackgroundColor:[UIColor navigationBarGrey]];
-    [self addSubview:self.navScrollView];
+#endif
     
+    [self addSubview:self.navScrollView];
 }
 
 - (void)addHairline {
@@ -93,6 +98,12 @@
 
     UIView *result = [[UIView alloc] initWithFrame:CGRectZero];
     
+#ifdef VISUALDEBUG
+    [result setBackgroundColor:[UIColor blueColor]];
+#else
+    [result setBackgroundColor:[UIColor clearColor]];
+#endif
+    
     NSString *measurementTitle = @"";
     
     if (self.delegate) {
@@ -125,7 +136,7 @@
     
     [result addGestureRecognizer:gesture];
     
-    result.tag = index;
+    result.tag = 100 + index;
     
     return result;
 
@@ -137,6 +148,7 @@
     [super layoutSubviews];
     [self addNavScrollView];
     [self addHairline];
+    
     
     CGRect navScrollViewRect = self.navScrollView.frame;
     
@@ -193,12 +205,13 @@
 
 - (void)calculateInternals
 {
-    UIView *lastView = [self.navScrollView.subviews objectAtIndex:[self.navScrollView.subviews count] -1];
+    int count = [self.delegate numberOfItems];
+    UIView *lastView = [self.navScrollView viewWithTag:100 + count - 1];
     CGFloat a = lastView.frame.origin.x;
     CGFloat b = a;
     
-    if(a + lastView.frame.size.width + NAV_ITEM_MARGIN > self.navScrollView.frame.size.width){
-        b = self.navScrollView.frame.size.width - NAV_ITEM_MARGIN - lastView.frame.size.width;
+    if(a + lastView.frame.size.width + (2 * NAV_ITEM_MARGIN) > self.navScrollView.frame.size.width){
+        b = self.navScrollView.frame.size.width - (2 * NAV_ITEM_MARGIN) - lastView.frame.size.width;
     }
     
     NSUInteger n = [self.navScrollView.subviews count];
@@ -210,9 +223,9 @@
     
     UIView *item = [gesture view];
     
-    CGPoint newContentOffset = CGPointMake(self.displacement * item.tag, 0);
+    CGPoint newContentOffset = CGPointMake(self.displacement * (item.tag - 100), 0);
     
-    self.currentIndex = item.tag;
+    self.currentIndex = item.tag - 100;
     
     [self.navScrollView setContentOffset:newContentOffset animated:YES];
     
@@ -226,7 +239,8 @@
     CGFloat center = [self getBaselineCenterOfItemInNavViewAtIndex:self.currentIndex];
     
     [UIView animateWithDuration:.25 animations:^{
-        [self.chevronView setCenter:CGPointMake(center-(self.displacement * self.currentIndex), self.chevronView.center.y)];
+        CGPoint newCenter = CGPointMake(center-(self.displacement * self.currentIndex), self.chevronView.center.y);
+        [self.chevronView setCenter: newCenter];
         
     }];
 }
@@ -235,7 +249,7 @@
     CGFloat result = 0.0f;
     
     for(UIView *v in [self.navScrollView subviews]){
-        if (v.tag==index) {
+        if (v.tag == index + 100) {
             
             CGFloat width,origin;
             

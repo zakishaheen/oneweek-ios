@@ -141,12 +141,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uyc-jd-bzF" customClass="OWWeekPickerView">
-                                <rect key="frame" x="0.0" y="66" width="320" height="56"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iow-rW-5FS" customClass="OWNavigationView">
-                                <rect key="frame" x="0.0" y="121" width="320" height="56"/>
+                                <rect key="frame" x="0.0" y="119" width="320" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
