@@ -32,9 +32,13 @@
 
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+    
+}
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:YES];
-        [self.valueInput becomeFirstResponder];
+    [self.valueInput becomeFirstResponder];
 }
 - (void)didReceiveMemoryWarning
 {
