@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OWWeekPickerView : UIView
+@interface OWWeekPickerView : UIView< UIScrollViewDelegate>
 
 @end
