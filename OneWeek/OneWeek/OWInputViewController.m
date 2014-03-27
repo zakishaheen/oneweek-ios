@@ -7,6 +7,7 @@
 //
 
 #import "OWInputViewController.h"
+#import "UIColor+CustomColors.h"
 
 @interface OWInputViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *valueInput;
@@ -28,6 +29,22 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    
+    CGRect viewBounds = self.view.bounds;
+    
+    
+    CGRect hairlineRect = CGRectMake(0,
+                                     0,
+                                     viewBounds.size.width,
+                                     1.0);
+    
+    UIView *hairline = [[UIView alloc] initWithFrame:hairlineRect];
+    
+    [hairline setBackgroundColor:[UIColor hairlineColor]];
+    
+    
+    [self.valueInput setInputAccessoryView:hairline];
 
 
 }

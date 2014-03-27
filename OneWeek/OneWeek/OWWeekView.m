@@ -47,7 +47,7 @@
         NSInteger endDay = endComponents.day;
         
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateFormat:@"MMM ''yy"];
+        [dateFormatter setDateFormat:@"MMM''yy"];
         
         self.weekText = [NSString stringWithFormat:@"%.2d - %.2d", startDay, endDay];
         self.monthText = [[dateFormatter stringFromDate:endDate] uppercaseString];

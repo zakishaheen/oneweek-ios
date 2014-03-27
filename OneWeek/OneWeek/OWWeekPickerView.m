@@ -130,6 +130,9 @@
     
     OWWeekView *current = (OWWeekView*)[self.navScrollView viewWithTag:i-1];
     [current setIsCurrent:YES];
+    [current setIsSelected:YES];
+    [current setHasContent:YES];
+    self.previousSelected = current;
     
     [self.navScrollView setContentSize:CGSizeMake(80* [self.weeksToShow count], 40)];
     [self.navScrollView setContentOffset:CGPointMake(self.navScrollView.contentSize.width - self.navScrollView.bounds.size.width, 0)];

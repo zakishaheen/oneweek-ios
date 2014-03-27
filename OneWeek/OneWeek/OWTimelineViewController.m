@@ -45,9 +45,19 @@
     [self.navView setFrame:CGRectMake(0, barHeight, screenWidth, 56)];
     [self.view addSubview:self.navView];
     
-    self._tableView.contentInset = UIEdgeInsetsMake(56, 0, 0, 0);
+
+    self._tableView.contentInset = UIEdgeInsetsMake(self.navView.frame.size.height, 0, 0, 0);
     
     
+
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+}
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
 
 }
 
