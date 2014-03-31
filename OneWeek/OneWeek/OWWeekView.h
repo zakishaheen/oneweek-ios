@@ -7,13 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface OWWeekView : UIView{
+#import "OWSelectableView.h"
+@interface OWWeekView : OWSelectableView{
     NSDate *_date;
 }
-@property (nonatomic, setter = setIsSelected:) BOOL isSelected;
-@property (nonatomic, setter = setHasContent:) BOOL hasContent;
-@property (nonatomic, setter = setIsCurrent:) BOOL isCurrent;
-
 - (id) initWithDate:(NSDate*)date andFrame:(CGRect)frame;
 @end

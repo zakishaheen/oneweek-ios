@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5031282C18E471440089F314 /* OWMeasurementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5031282B18E471440089F314 /* OWMeasurementView.m */; };
+		5031282F18E471660089F314 /* OWSelectableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5031282E18E471660089F314 /* OWSelectableView.m */; };
 		504E3DB618D9D9150002FAE5 /* OWNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 504E3DB518D9D9150002FAE5 /* OWNavigationView.m */; };
 		504E3DB918DDB1CE0002FAE5 /* OWWeekPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 504E3DB818DDB1CE0002FAE5 /* OWWeekPickerView.m */; };
 		50C3546718D8460D005F5C20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50C3546618D8460D005F5C20 /* Foundation.framework */; };
@@ -47,6 +49,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5031282A18E471440089F314 /* OWMeasurementView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWMeasurementView.h; sourceTree = "<group>"; };
+		5031282B18E471440089F314 /* OWMeasurementView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWMeasurementView.m; sourceTree = "<group>"; };
+		5031282D18E471660089F314 /* OWSelectableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWSelectableView.h; sourceTree = "<group>"; };
+		5031282E18E471660089F314 /* OWSelectableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWSelectableView.m; sourceTree = "<group>"; };
 		504E3DB418D9D9150002FAE5 /* OWNavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWNavigationView.h; sourceTree = "<group>"; };
 		504E3DB518D9D9150002FAE5 /* OWNavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWNavigationView.m; sourceTree = "<group>"; };
 		504E3DB718DDB1CE0002FAE5 /* OWWeekPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWWeekPickerView.h; sourceTree = "<group>"; };
@@ -239,6 +245,10 @@
 				504E3DB818DDB1CE0002FAE5 /* OWWeekPickerView.m */,
 				50E4F4D918E07B590023AEEF /* OWWeekView.h */,
 				50E4F4DA18E07B590023AEEF /* OWWeekView.m */,
+				5031282A18E471440089F314 /* OWMeasurementView.h */,
+				5031282B18E471440089F314 /* OWMeasurementView.m */,
+				5031282D18E471660089F314 /* OWSelectableView.h */,
+				5031282E18E471660089F314 /* OWSelectableView.m */,
 			);
 			name = "OneWeek - Main";
 			sourceTree = "<group>";
@@ -372,6 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5031282C18E471440089F314 /* OWMeasurementView.m in Sources */,
 				50C354A918D851D9005F5C20 /* OWTimelineViewController.m in Sources */,
 				504E3DB918DDB1CE0002FAE5 /* OWWeekPickerView.m in Sources */,
 				50C3547718D8460D005F5C20 /* OWAppDelegate.m in Sources */,
@@ -381,6 +392,7 @@
 				50C354A018D84CCC005F5C20 /* OWOverviewViewController.m in Sources */,
 				50C354B518D85684005F5C20 /* UIColor+CustomColors.m in Sources */,
 				50E4F4DB18E07B590023AEEF /* OWWeekView.m in Sources */,
+				5031282F18E471660089F314 /* OWSelectableView.m in Sources */,
 				50C354CE18D8782E005F5C20 /* OWBasicDataModel.m in Sources */,
 				504E3DB618D9D9150002FAE5 /* OWNavigationView.m in Sources */,
 				50C354AC18D851E4005F5C20 /* OWInputViewController.m in Sources */,

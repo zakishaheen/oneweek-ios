@@ -66,6 +66,8 @@
 
 - (void)applyFormatting{
     
+    [super applyFormatting];
+    
     NSString *weekFontName = @"HelveticaNeue-Light";
     NSString *monthFontName = @"HelveticaNeue-Light";
     
@@ -134,18 +136,6 @@
     [self.monthLabel setTextAlignment:NSTextAlignmentCenter];
 
     
-}
-- (void)setIsSelected:(BOOL)value{
-    _isSelected =value;
-    [self applyFormatting];
-}
-- (void)setHasContent:(BOOL)value{
-    _hasContent =value;
-    [self applyFormatting];
-}
-- (void)setIsCurrent:(BOOL)value{
-    _isCurrent =value;
-    [self applyFormatting];
 }
 
 /*
