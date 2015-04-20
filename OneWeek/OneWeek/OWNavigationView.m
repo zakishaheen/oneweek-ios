@@ -105,14 +105,17 @@
 #endif
     
     NSString *measurementTitle = @"";
+    NSString *latestValue = @"";
     
     if (self.delegate) {
         measurementTitle = [self.delegate titleForItemAtIndex:index];
     }
     
     UILabel *title = [self getLabelWithText:measurementTitle andFontName:@"HelveticaNeue" andFontSize:16.0 andFontColor:[UIColor blackColor]];
-    UILabel *subtitle = [self getLabelWithText:@"hello" andFontName:@"HelveticaNeue-Light" andFontSize:12.0 andFontColor:[UIColor rubineRed]];
+    title.tag = 101;
     
+    UILabel *subtitle = [self getLabelWithText:latestValue andFontName:@"HelveticaNeue-Light" andFontSize:12.0 andFontColor:[UIColor rubineRed]];
+    subtitle.tag = 102;
 
     [result addSubview:title];
     [result addSubview:subtitle];
@@ -228,8 +231,6 @@
     self.currentIndex = item.tag - 100;
     
     [self.navScrollView setContentOffset:newContentOffset animated:YES];
-    
-
     [self resetChevronCenter];
     
 }
